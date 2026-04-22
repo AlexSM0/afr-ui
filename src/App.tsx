@@ -66,8 +66,14 @@ export const App = () => {
           <Tag size="lg" variant="ghost"  children="#Ghost"/>
         </div>
 
-        <div>
-          <Input />
+        <div className="flex gap-2">
+          <Input variant="primary" label="Primary-text" type="text" placeholder="Placeholder" helperText="Helper Text"/>
+          <Input variant="primary" label="Primary-password" type="password" placeholder="Placeholder" helperText="Helper Text"/>
+          <Input variant="primary" label="Primary-email" type="email" placeholder="Placeholder" helperText="Helper Text"/>
+        </div>
+        <div className="flex gap-2">
+          <Input variant="primary" label="Primary-file" type="file" placeholder="Placeholder" helperText="Helper Text"/>
+          <Input variant="primary" label="Primary-search" type="search" placeholder="Placeholder" helperText="Helper Text"/>
         </div>
       </div>
 
