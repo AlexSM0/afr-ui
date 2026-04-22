@@ -8,7 +8,7 @@ type inputProps = {
     className?: string
 } & VariantProps<typeof inputStyles>
 
-export const Input = ({ children, variant, className } : inputProps)  => {
+export const Input = ({ children, variant, className = "bg-amber-50 rounded-2xl border border-purple-50 focus:border-sky-400" } : inputProps)  => {
 
     return (
         <input
