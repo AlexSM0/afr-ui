@@ -9,7 +9,11 @@ export const inputStyles = cva(
                 primary: "",
                 secondary: "",
                 danger: "",
-                ghost: ""
+                ghost: "opacity-20"
+            },
+
+            size: {
+                
             }
         }
     }
