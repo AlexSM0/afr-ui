@@ -2,9 +2,7 @@ import { cva } from "class-variance-authority"
 
 export const inputStyles = cva(
     `bg-amber-50 
-    rounded-sm
-    border border-purple-50 
-    focus:border-sky-400` //base
+    rounded-sm` //base
     ,{
         variants: {
 
@@ -12,34 +10,24 @@ export const inputStyles = cva(
                 primary: "",
                 secondary: "",
                 danger: "",
-                ghost: "opacity-20"
+                ghost: ""
             },
 
             inputSize: {
-                sm: "p-2",
-                md: "p-4",
-                lg: "p-5"
-            },
-
-            inputType: {
-                text: "",
-                password: "",
-                email: "",
-                user: "",
-                search: ""
+                sm: "",
+                md: "",
+                lg: ""
             },
 
             state: {
                 error: "",
                 success: "",
-                disabled: ""
             }
         },
 
         defaultVariants: {
             variant: "primary",
-            inputSize: "md",
-            inputType: "text"
+            inputSize: "md"
         }
     }
 )

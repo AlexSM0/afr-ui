@@ -7,8 +7,8 @@ export interface InputProps
     React.InputHTMLAttributes<HTMLInputElement> {
   className?: string,
   onChange?: React.ChangeEventHandler<HTMLInputElement>,
-  placeholder?: string,
   helperText?: string,
   leftIcon?: React.ReactNode,
-  rightIcon?: React.ReactNode
+  rightIcon?: React.ReactNode,
+  label?: string
 }
