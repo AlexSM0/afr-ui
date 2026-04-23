@@ -7,7 +7,7 @@ html, body, #root{
 
 @layer components{
     .app-layout{
-        @apply min-h-screen bg-[#3A3C3C] grid grid-cols-1 p-1 font-mono;
+        @apply min-h-screen grid grid-cols-1 p-3 font-mono;
     }
 
     .center-column {

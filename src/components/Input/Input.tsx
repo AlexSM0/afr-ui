@@ -2,10 +2,9 @@ import type { InputProps } from "./Input.interface";
 import { inputStyles } from "./Input.styles";
 import clsx from "clsx";
 import { useId } from "react";
-import { SearchIcon } from "lucide-react";
-import { FileIcon } from "lucide-react";
-import { MailIcon } from "lucide-react";
-import { RectangleEllipsisIcon } from "lucide-react";
+import { iconMap } from "./utils/inputIconMap";
+import { variantTokens } from "./tokens/input"
+import { stateTokens } from "./tokens/input";
 
 export const Input = ({ 
     variant,
@@ -20,26 +19,21 @@ export const Input = ({
     ...props } 
     : InputProps)  => {
 
-    const iconMap = {
-        search: <SearchIcon/>,
-        password: <RectangleEllipsisIcon/>,
-        email: <MailIcon/>,
-        file: <FileIcon/>
-    }
-
-    const defaultRightIcon = iconMap[props.type as keyof typeof iconMap];
+    const defaultRightIcon = state ? iconMap[state] : iconMap[props.type ?? "text"];
     const finalRightIcon = rightIcon ?? defaultRightIcon
 
     const generatedId = useId()
     const inputId = id ?? generatedId
     const helperId = `${inputId}-helper`
 
+    const styles = state ? stateTokens[state] : variantTokens[variant ?? "primary"]
+
     return (
         <div className="relative flex flex-col gap-1">
 
             {/* LABEL */}
             {label && (
-                <label htmlFor={inputId} className="text-sm font-medium">
+                <label htmlFor={inputId} className={`${styles.label} text-sm font-medium`}>
                     {label}
                 </label>
                 )
@@ -58,7 +52,7 @@ export const Input = ({
                 id={inputId}
                 aria-describedby={helperText ? helperId : undefined}
                 {...props}
-                className={clsx(inputStyles({ variant, inputSize, state }), 
+                className={clsx(inputStyles({ state, variant, inputSize }), 
                 className, 
                 leftIcon && "pl-10",
                 finalRightIcon && "pr-10")}
@@ -74,7 +68,7 @@ export const Input = ({
             </div>
 
            { helperText && 
-           <span id={helperId} className="text-xs text-gray-500">{helperText}</span> }
+           <span id={helperId} className={`${styles.helper} text-xs`}>{helperText}</span> }
         </div>
     )
 }
