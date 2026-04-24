@@ -6,7 +6,8 @@ import { stateIconMap, typeIconMap } from "./utils/inputIconMap";
 import { variantTokens } from "./tokens/inputTokens"
 import { stateTokens } from "./tokens/inputTokens";
 
-export const Input = ({ 
+export const Input = ({
+    type, 
     variant,
     helperText,
     leftIcon,
@@ -19,7 +20,7 @@ export const Input = ({
     ...props } 
     : InputProps)  => {
 
-    const defaultRightIcon = state ? stateIconMap[state] : typeIconMap[props.type ?? "text"];
+    const defaultRightIcon = state ? stateIconMap[state] : typeIconMap[type ?? "text"];
     const finalRightIcon = rightIcon ?? defaultRightIcon
 
     const generatedId = useId()
@@ -53,6 +54,7 @@ export const Input = ({
                 id={inputId}
                 aria-describedby={helperText ? helperId : undefined}
                 {...props}
+                type={type}
                 className={clsx(inputStyles({ state, variant, inputSize }), 
                 className, 
                 leftIcon && "pl-10",

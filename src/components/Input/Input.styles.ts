@@ -1,16 +1,18 @@
 import { cva } from "class-variance-authority"
 
 export const inputStyles = cva(
-    `py-2
+    `leading-tight
+    py-2
     px-2.5
+    bg-gray-200/95
     focus:outline-none
     rounded-sm
     rounded-b-none
     shadow
     placeholder-gray-400
-    hover:border-b-4
+    border-b-2
     focus:bg-transparent 
-    focus:border-b-3 
+    focus:border-b-2 
     focus:placeholder-transparent 
     focus:shadow-none 
     focus:rounded-none 
@@ -20,9 +22,9 @@ export const inputStyles = cva(
         variants: {
 
             variant: {
-                primary: "bg-gray-200/95 border-b-2 border-b-sky-400 ",
-                secondary: "bg-gray-200/95 border-b-2 border-b-black ",
-                danger: "bg-gray-200/95 border-b-2 border-b-red-700",
+                primary: "border-b-transparent hover:border-b-sky-400 focus:border-b-sky-400 ",
+                secondary: "border-b-transparent hover:border-b-black focus:border-b-black ",
+                danger: "border-b-transparent hover:border-b-red-700 focus:border-b-red-700 ",
                 ghost: "bg-transparent border-b-2 border-b-gray-400 shadow-none"
             },
 
