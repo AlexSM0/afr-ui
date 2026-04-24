@@ -1,0 +1,73 @@
+import type { Meta, StoryObj } from "@storybook/react-vite"
+import { Input } from "./Input"
+
+const meta: Meta<typeof Input> = {
+  title: "Primitives/Input",
+  component: Input,
+
+  tags: ["autodocs"],
+
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["primary", "secondary", "danger", "ghost"],
+    },
+    inputSize: {
+      control: "select",
+      options: ["sm", "md", "lg"],
+    },
+    state: {
+      control: "select",
+      options: ["error", "success", null],
+    },
+    type: {
+      control: "select",
+      options: ["text", "email", "password", "search", "file"],
+    },
+  },
+
+  args: {
+    placeholder: "Type something...",
+  },
+}
+
+export default meta
+
+type Story = StoryObj<typeof Input>
+
+export const Default: Story = {
+  args: {
+    label: "Username",
+    variant: "primary"
+  },
+}
+
+export const WithHelper: Story = {
+  args: {
+    label: "Email",
+    helperText: "We’ll never share your email",
+  },
+}
+
+export const Error: Story = {
+  args: {
+    label: "Email",
+    state: "error",
+    helperText: "Invalid email address",
+  },
+}
+
+export const Success: Story = {
+  args: {
+    label: "Email",
+    state: "success",
+    helperText: "Looks good!",
+  },
+}
+
+export const WithIcons: Story = {
+  args: {
+    type: "search",
+    placeholder: "Search...",
+  },
+}
