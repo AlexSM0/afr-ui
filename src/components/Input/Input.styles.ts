@@ -8,6 +8,7 @@ export const inputStyles = cva(
     rounded-b-none
     shadow
     placeholder-gray-400
+    hover:border-b-4
     focus:bg-transparent 
     focus:border-b-3 
     focus:placeholder-transparent 
@@ -32,8 +33,8 @@ export const inputStyles = cva(
             },
 
             state: {
-                error: "border-b-red-500!",
-                success: "border-b-green-400!",
+                error: "bg-red-200",
+                success: "bg-green-200",
             },
             
         },

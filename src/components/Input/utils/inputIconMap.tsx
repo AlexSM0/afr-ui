@@ -9,11 +9,16 @@ import {
 } from "lucide-react"
 
 
-export const iconMap: Record<string, ReactNode> = {
+export const typeIconMap: Record<string, ReactNode> = {
   search: <SearchIcon/>,
   password: <RectangleEllipsisIcon/>,
   email: <MailIcon/>,
   file: <FileIcon/>,
+  error: <BadgeAlertIcon color="#fb2c36"/>,
+  success: <CheckIcon color="#05df72"/>
+}
+
+export const stateIconMap: Record<string, ReactNode> = {
   error: <BadgeAlertIcon color="#fb2c36"/>,
   success: <CheckIcon color="#05df72"/>
 }

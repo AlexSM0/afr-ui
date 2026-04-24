@@ -2,9 +2,9 @@ import type { InputProps } from "./Input.interface";
 import { inputStyles } from "./Input.styles";
 import clsx from "clsx";
 import { useId } from "react";
-import { iconMap } from "./utils/inputIconMap";
-import { variantTokens } from "./tokens/input"
-import { stateTokens } from "./tokens/input";
+import { stateIconMap, typeIconMap } from "./utils/inputIconMap";
+import { variantTokens } from "./tokens/inputTokens"
+import { stateTokens } from "./tokens/inputTokens";
 
 export const Input = ({ 
     variant,
@@ -19,21 +19,22 @@ export const Input = ({
     ...props } 
     : InputProps)  => {
 
-    const defaultRightIcon = state ? iconMap[state] : iconMap[props.type ?? "text"];
+    const defaultRightIcon = state ? stateIconMap[state] : typeIconMap[props.type ?? "text"];
     const finalRightIcon = rightIcon ?? defaultRightIcon
 
     const generatedId = useId()
     const inputId = id ?? generatedId
     const helperId = `${inputId}-helper`
 
-    const styles = state ? stateTokens[state] : variantTokens[variant ?? "primary"]
-
+    const variantStyle = variantTokens[variant ?? "primary"]
+    const stateStyle = state ? stateTokens[state] : stateTokens["default"]
+    
     return (
         <div className="relative flex flex-col gap-1">
 
             {/* LABEL */}
             {label && (
-                <label htmlFor={inputId} className={`${styles.label} text-sm font-medium`}>
+                <label htmlFor={inputId} className={`${variantStyle.label} text-sm font-medium`}>
                     {label}
                 </label>
                 )
@@ -68,7 +69,7 @@ export const Input = ({
             </div>
 
            { helperText && 
-           <span id={helperId} className={`${styles.helper} text-xs`}>{helperText}</span> }
+           <span id={helperId} className={`${stateStyle?.helper} text-xs`}>{helperText}</span> }
         </div>
     )
 }
