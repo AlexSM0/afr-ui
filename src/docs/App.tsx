@@ -1,8 +1,8 @@
 // import { useState } from 'react'
 import "./styles/globals.css"
-import { Button } from './components/Primitives/Button/Button'
-import { Tag } from "./components/Primitives/Tag/Tag"
-import { Input } from "./components/Primitives/Input/Input"
+import { Button } from '@/components/Primitives/Button/Button'
+import { Tag } from "@/components/Primitives/Tag/Tag"
+import { Input } from "@/components/Primitives/Input/Input"
 
 export const App = () => {
 
