@@ -2,9 +2,9 @@ import type { InputProps } from "./Input.interface";
 import { inputStyles } from "./Input.styles";
 import clsx from "clsx";
 import { useId } from "react";
-import { stateIconMap, typeIconMap } from "./utils/inputIconMap";
-import { variantTokens } from "./tokens/inputTokens"
-import { stateTokens } from "./tokens/inputTokens";
+import { stateIconMap, typeIconMap } from "@/icons/inputIconMap";
+import { variantTokens } from "@/tokens/input/variants"
+import { stateTokens } from "@/tokens/input/states";
 
 export const Input = ({
     type, 

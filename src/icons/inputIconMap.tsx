@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import type { InputType, StateType } from "../Input.interface"
+import type { InputType, StateType } from "@/types/input"
 
 import {
   SearchIcon,
