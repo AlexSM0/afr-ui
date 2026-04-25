@@ -2,8 +2,9 @@ import { cva } from "class-variance-authority"
 
 export const inputStyles = cva(
     `leading-tight
+    w-full
     py-2
-    px-2.5
+    px-2
     bg-gray-200/95
     focus:outline-none
     rounded-sm
@@ -22,16 +23,20 @@ export const inputStyles = cva(
         variants: {
 
             variant: {
-                primary: "border-b-transparent hover:border-b-sky-400 focus:border-b-sky-400 ",
-                secondary: "border-b-transparent hover:border-b-black focus:border-b-black ",
-                danger: "border-b-transparent hover:border-b-red-700 focus:border-b-red-700 ",
-                ghost: "bg-transparent border-b-2 border-b-gray-400 shadow-none"
+                primary: 
+                    "border-b-transparent hover:border-b-sky-400 focus:border-b-sky-400 ",
+                secondary: 
+                    "border-b-transparent hover:border-b-black focus:border-b-black ",
+                danger: 
+                    "border-b-transparent hover:border-b-red-700 focus:border-b-red-700 ",
+                ghost: 
+                    "bg-transparent border-b-2 border-b-gray-400 shadow-none"
             },
 
             inputSize: {
-                sm: "text-sm",
-                md: "text-md",
-                lg: "text-lg"
+                sm: "text-sm min-w-40",
+                md: "text-base min-w-55",
+                lg: "text-lg min-w-70",
             },
 
             state: {
@@ -42,6 +47,7 @@ export const inputStyles = cva(
         },
 
         defaultVariants: {
+            variant: "primary",
             inputSize: "md"
         },
 

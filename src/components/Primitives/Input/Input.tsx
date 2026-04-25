@@ -31,7 +31,7 @@ export const Input = ({
     const stateStyle = state ? stateTokens[state] : stateTokens["default"]
     
     return (
-        <div className="relative flex flex-col gap-1">
+        <div className="inline-flex flex-col gap-1 w-fit">
 
             {/* LABEL */}
             {label && (
@@ -42,12 +42,12 @@ export const Input = ({
             }
 
             {/*Input wrapper*/}
-            <div className="relative flex items-center">
+            <div className="relative inline-block">
                 {/* optional icon */}
                 {leftIcon && (
-                    <div className="absolute left-3 flex items-center ">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
                         {leftIcon}
-                    </div>
+                    </span>
                 )}
                 
                 <input
@@ -63,9 +63,9 @@ export const Input = ({
 
                 {/* optional icon */}
                 {finalRightIcon && (
-                <div className="absolute right-3 flex items-center ">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
                     {finalRightIcon}
-                </div>
+                </span>
                 )}
 
             </div>

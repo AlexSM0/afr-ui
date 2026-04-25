@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 import { Input } from "./Input"
+import { SearchIcon } from "lucide-react"
 
 const meta: Meta<typeof Input> = {
   title: "Primitives/Input",
@@ -24,6 +25,7 @@ const meta: Meta<typeof Input> = {
       control: "select",
       options: ["text", "email", "password", "search", "file"],
     },
+    
   },
 
   args: {
@@ -38,7 +40,6 @@ type Story = StoryObj<typeof Input>
 export const Default: Story = {
   args: {
     label: "Username",
-    variant: "primary"
   },
 }
 
@@ -68,6 +69,7 @@ export const Success: Story = {
 export const WithIcons: Story = {
   args: {
     type: "search",
+    leftIcon: <SearchIcon />,
     placeholder: "Search...",
   },
 }
