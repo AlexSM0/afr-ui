@@ -39,7 +39,6 @@ type Story = StoryObj<typeof Input>
 
 export const Default: Story = {
   args: {
-    label: "Username",
   },
 }
 
@@ -71,5 +70,29 @@ export const WithIcons: Story = {
     type: "search",
     leftIcon: <SearchIcon />,
     placeholder: "Search...",
+  },
+}
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+    label: "Secondary",
+    helperText: "Helper text"    
+  },
+}
+
+export const Danger: Story = {
+  args: {
+    variant: "danger",
+    label: "Danger",
+    helperText: "Helper text"
+  },
+}
+
+export const Ghost: Story = {
+  args: {
+    variant: "ghost",
+    label: "Ghost",
+    helperText: "Helper text"
   },
 }
