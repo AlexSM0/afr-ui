@@ -1,4 +1,6 @@
 import type { Preview } from '@storybook/react-vite'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import "../src/styles/globals.css"
 
 const preview: Preview = {

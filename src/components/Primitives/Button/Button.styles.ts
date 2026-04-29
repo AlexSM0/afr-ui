@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority"
 
 export const buttonStyles = cva(
     `shadow-2xs border border-black rounded-2xl 
-    font-bold transition duration-200 active:scale-95
+    transition duration-200 active:scale-95
     focus:ring-2 focus:outline-none select-none` // base
     ,{
         variants: {
