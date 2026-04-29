@@ -1,17 +1,18 @@
 import { cva } from "class-variance-authority"
 
 export const buttonStyles = cva(
-    `shadow-2xs border border-black rounded-2xl 
-    transition duration-200 active:scale-95
-    focus:ring-2 focus:outline-none select-none
-    flex items-center justify-center` // base
+    `rounded-xl 
+    transition duration-200 active:scale-85
+    focus:ring-1 focus:outline-none select-none
+    flex items-center justify-center bg-linear-180
+    hover:opacity-90` // base
     ,{
         variants: {
             variant: {
-                primary: "bg-sky-400  hover:bg-sky-300 ",
-                secondary: "bg-mist-100 hover:bg-mist-200 ",
-                danger: "bg-red-500 hover:bg-red-400 ",
-                ghost: "bg-transparent hover:bg-gray-100"                   
+                primary: "shadow-black shadow-xs bg-linear-to-t from-sky-600 via-sky-500 to-sky-400  ",
+                secondary: "shadow-black shadow-xs bg-linear-to-t from-neutral-700 via-neutral-600 to-neutral-500 text-white",
+                danger: "shadow-black shadow-xs bg-linear-to-t from-rose-700 via-rose-500 to-rose-400 font-bold ",
+                ghost: "shadow-gray-100 shadow-xs border-2 border-gray-100 bg-transparent hover:bg-gray-10 text-gray-400"                   
             },
 
             size: {

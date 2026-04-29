@@ -25,7 +25,7 @@ export const Button =
 
         <button onClick={disabled ? undefined : onClick}
                 disabled={disabled}
-                className={clsx(buttonStyles({ variant, size, disabled }), className, "flex items-center justify-center") }>
+                className={clsx(buttonStyles({ variant, size, disabled }), className, "flex items-center") }>
         {children && icon ? (
         //children & icon render
         <>
@@ -36,7 +36,7 @@ export const Button =
         ) : icon ? (
 
         //only icon render
-        <div className="min-w-40 flex justify-center items-center">{icon}</div>
+        <div className="flex items-center">{icon}</div>
         ) : (
 
         // children only render
