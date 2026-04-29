@@ -2,35 +2,48 @@ import type React from "react"
 import { buttonStyles } from "./Button.styles"
 import type { VariantProps } from "class-variance-authority"
 import clsx from "clsx"
-import { Search } from "lucide-react"
 
 type ButtonProps = {
-    children: React.ReactNode,
+    children?: React.ReactNode,
     onClick?: () => void,
     disabled?: boolean,
     className?: string,
-    rightIcon?: React.ReactNode,
+    icon?: React.ReactNode,
 } & VariantProps<typeof buttonStyles>
 
-export const Button = 
-    ({children = "Lore Ipsum", 
+export const Button =  
+    ({children, 
     onClick, 
     disabled = false,
     variant,
     size,
-    rightIcon = <Search/>,
+    icon,
     className
     }: ButtonProps) => {
 
     return(
+
         <button onClick={disabled ? undefined : onClick}
                 disabled={disabled}
-                className={clsx(buttonStyles({ variant, size, disabled }), className, "flex ") }>
+                className={clsx(buttonStyles({ variant, size, disabled }), className, "flex items-center") }>
+        {children && icon ? (
+        //children & icon render
+        <>
             {children}
+            <div className="ml-2">{icon}</div>
+        </>
+        
+        ) : icon ? (
 
-            {rightIcon && (
-            <span className="ml-1">{rightIcon}</span>
-            )}
+        //only icon render
+        <div className="flex items-center">{icon}</div>
+        ) : (
+
+        // children only render
+        children
+        )}
+
         </button>
+
     )
 }
