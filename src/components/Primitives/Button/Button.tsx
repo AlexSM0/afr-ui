@@ -30,7 +30,7 @@ export const Button =
         //children & icon render
         <>
             {children}
-            <div className="ml-1">{icon}</div>
+            <div className="ml-2">{icon}</div>
         </>
         
         ) : icon ? (
