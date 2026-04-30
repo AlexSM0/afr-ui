@@ -5,18 +5,20 @@ import clsx from "clsx"
 
 type tagProps = {
     children?: React.ReactNode,
-    className?: string
 } & VariantProps<typeof TagStyles>
+& React.HTMLAttributes<HTMLSpanElement>;
 
 export const Tag = ({
     children, 
     variant,
     size,
-    className}: 
+    className,
+    ...props}: 
     tagProps) => {
         return(
             <span 
-            className={clsx(TagStyles({variant, size}), className)}>
+            className={clsx(TagStyles({variant, size}), className)}
+            {...props}>
                 {children}
             </span>
         )
