@@ -24,6 +24,14 @@ export default defineConfig({
   test: {
     projects: [
       {
+        extends: true,
+
+        resolve: {
+          alias: {
+            "@": path.resolve(dirname, "./src"),
+          },
+        },
+
         test: {
           name: "unit",
           environment: "jsdom",
@@ -36,6 +44,12 @@ export default defineConfig({
       {
         extends: true,
 
+        resolve: {
+          alias: {
+            "@": path.resolve(dirname, "./src"),
+          },
+        },
+
         plugins: [
           storybookTest({
             configDir: path.join(dirname, ".storybook"),
@@ -44,7 +58,6 @@ export default defineConfig({
 
         test: {
           name: "storybook",
-
           browser: {
             enabled: true,
             headless: true,

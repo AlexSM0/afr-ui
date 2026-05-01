@@ -12,7 +12,6 @@ describe("button", () => {
             expect(screen.getByText("Save")).toBeInTheDocument();
         });
 
-
         it("renders as button", () => {
             render(<Button>Save</Button>);
 
@@ -30,6 +29,10 @@ describe("button", () => {
 
             expect(screen.getByText("Save")).toBeInTheDocument();
             expect(screen.getByText("⭐")).toBeInTheDocument();
+        });
+
+        it("renders without props", () => {
+            render(<Button/>);
         });
     });
 
@@ -71,9 +74,6 @@ describe("button", () => {
             expect(screen.getByText("Save")).toHaveClass("cursor-not-allowed");
         });
 
-        it("renders without props", () => {
-            render(<Button/>);
-        });
     });
 
     describe("functionalities", () => {
