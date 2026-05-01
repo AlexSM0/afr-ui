@@ -44,6 +44,12 @@ describe("Tag", () => {
         expect(screen.getByText("Admin")).toHaveClass("text-xs");
     });
 
+    it("applies size classes", () => {
+        render(<Tag size={"sm"}>Admin</Tag>);
+
+        expect(screen.getByText("Admin")).toHaveClass("text-xs");
+    });
+
     it("renders without children", () => {
         render(<Tag/>);
     });
