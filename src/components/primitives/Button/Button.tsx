@@ -10,6 +10,7 @@ type ButtonProps = {
     className?: string,
     icon?: React.ReactNode,
 } & VariantProps<typeof buttonStyles>
+& React.HTMLAttributes<HTMLButtonElement>
 
 export const Button =  
     ({children, 
@@ -18,14 +19,16 @@ export const Button =
     variant,
     size,
     icon,
-    className
+    className,
+    ...props
     }: ButtonProps) => {
 
     return(
 
         <button onClick={disabled ? undefined : onClick}
                 disabled={disabled}
-                className={clsx(buttonStyles({ variant, size, disabled }), className, "flex items-center") }>
+                className={clsx(buttonStyles({ variant, size, disabled }), className, "flex items-center") }
+                {...props}>
         {children && icon ? (
         //children & icon render
         <>

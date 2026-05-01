@@ -12,7 +12,7 @@ export default defineConfig([globalIgnores(['dist']), {
   files: ['**/*.{ts,tsx}'],
   extends: [
     js.configs.recommended,
-    tseslint.configs.recommended,
+    tseslint.configs.recommendedTypeChecked,
     reactHooks.configs.flat.recommended,
     reactRefresh.configs.vite,
   ],
@@ -20,4 +20,17 @@ export default defineConfig([globalIgnores(['dist']), {
     ecmaVersion: 2020,
     globals: globals.browser,
   },
+  rules:{
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "no-console": "warn",
+    "no-debugger": "error",
+
+    "@typescript-eslint/consistent-type-imports": "error",
+
+    "react-hooks/exhaustive-deps": "warn",
+
+    "prefer-const": "error",
+    "no-var": "error"    
+  }
 }, ...storybook.configs["flat/recommended"]])
