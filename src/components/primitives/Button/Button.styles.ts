@@ -5,14 +5,30 @@ export const buttonStyles = cva(
     transition duration-200 active:scale-85
     focus:ring-1 focus:outline-none select-none
     flex items-center justify-center bg-linear-180
-    hover:opacity-90` // base
+    ` // base
     ,{
         variants: {
             variant: {
-                primary: "shadow-black shadow-xs bg-linear-to-t from-sky-600 via-sky-500 to-sky-400  ",
-                secondary: "shadow-black shadow-xs bg-linear-to-t from-neutral-700 via-neutral-600 to-neutral-500 text-white",
-                danger: "shadow-black shadow-xs bg-linear-to-t from-rose-700 via-rose-500 to-rose-400 font-bold ",
-                ghost: "shadow-gray-100 shadow-xs border-2 border-gray-100 bg-transparent hover:bg-gray-10 text-gray-400"                   
+                primary: 
+                `shadow-black shadow-xs 
+                bg-linear-to-t from-sky-600 via-sky-500 to-sky-400  
+                hover:opacity-90`,
+
+                secondary: 
+                `shadow-black shadow-xs 
+                bg-linear-to-t from-neutral-700 via-neutral-600 to-neutral-500 
+                text-white hover:opacity-90`,
+
+                danger: 
+                `shadow-black shadow-xs 
+                bg-linear-to-t from-rose-700 via-rose-500 to-rose-400 
+                font-bold hover:opacity-90`,
+
+                ghost: 
+                `shadow-gray-100 shadow-xs 
+                border-2 border-gray-100 
+                bg-transparent hover:bg-gray-10 
+                text-gray-400`                  
             },
 
             size: {
@@ -22,7 +38,7 @@ export const buttonStyles = cva(
             },
 
             disabled: {
-                true: "opacity-40 cursor-not-allowed",
+                true: "opacity-40 cursor-not-allowed hover:opacity-40! active:scale-100!",
                 false: "cursor-pointer"
             },
             
