@@ -13,5 +13,5 @@
 ### Added
 
 * Input component
-* Unit testing 
+* Unit testing
 * Storybook

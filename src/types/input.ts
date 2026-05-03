@@ -5,5 +5,4 @@ export type InputType = "search"
 | "text"
 
 export type StateType = 
-"error" 
-| "success"
+"error" | "success"
