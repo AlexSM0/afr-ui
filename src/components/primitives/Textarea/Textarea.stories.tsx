@@ -16,6 +16,10 @@ const meta: Meta<typeof Textarea> = {
       control: "select",
       options: ["error", "success", null],
     },
+    size: {
+      control: "select",
+      options: ["sm", "md", "lg"]
+    }
     
   },
 
@@ -31,5 +35,9 @@ type Story = StoryObj<typeof Textarea>
 
 export const Default: Story = {
   args: {
+    label: "Label",
+    helperText: "Helper Text",
+    placeholder: "Placeholder...",
+    resize: "none"
   },
 }

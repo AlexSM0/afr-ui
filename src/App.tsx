@@ -3,6 +3,7 @@ import "./styles/globals.css"
 import { Button } from '@/components/primitives/Button/Button'
 import { Tag } from "@/components/primitives/Tag/Tag"
 import { Input } from "@/components/primitives/Input/Input"
+import { Textarea } from "./components/primitives/Textarea/Textarea"
 
 export const App = () => {
 
@@ -104,6 +105,10 @@ export const App = () => {
         <div className="flex gap-2">
           <Input inputSize="md" variant="ghost" label="ghost-file" type="file" placeholder="Placeholder" helperText="Helper Text"/>
           <Input inputSize="md" variant="ghost" label="ghost-search" type="search" placeholder="Placeholder" helperText="Helper Text"/>
+        </div>
+
+        <div>
+          <Textarea></Textarea>
         </div>
 
       </div>

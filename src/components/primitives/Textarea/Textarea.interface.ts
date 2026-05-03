@@ -10,6 +10,5 @@ export interface TextareaProps
     helperText?: string,
     state?: StateType,
     className?: string,
-    resize?: boolean,
-    disabled?: boolean
+    resize?: "none" | "vertical" | "both",
 }  
