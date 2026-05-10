@@ -15,3 +15,10 @@
 * Input component
 * Unit testing
 * Storybook
+
+## v0.0.3 — 10/05/2026
+
+### Added
+
+* Textarea component
+
