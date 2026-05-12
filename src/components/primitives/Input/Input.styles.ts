@@ -42,6 +42,7 @@ export const inputStyles = cva(
             state: {
                 error: "bg-red-200",
                 success: "bg-green-200",
+                default: ""
             },
             
         },
