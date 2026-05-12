@@ -22,3 +22,8 @@
 
 * Textarea component
 
+## v0.0.4 — 12/05/2026
+
+### Added
+
+* Checkbox component
