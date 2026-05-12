@@ -22,7 +22,7 @@ export const Checkbox = ({
     return(
         <div className="flex flex-col gap-1">
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
 
                 <input type="checkbox" 
                 aria-describedby={helperText ? helperId : undefined}
