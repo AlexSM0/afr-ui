@@ -27,3 +27,9 @@
 ### Added
 
 * Checkbox component
+
+## v0.0.5 — 12/05/2026
+
+### Added
+
+* Radio component
