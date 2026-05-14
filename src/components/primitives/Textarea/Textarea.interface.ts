@@ -1,4 +1,4 @@
-import type { StateType } from "@/types/input";
+import type { StateType } from "@/types/globals";
 import type React from "react";
 import { TextareaStyles } from "./Textarea.styles";
 import type { VariantProps } from "class-variance-authority";

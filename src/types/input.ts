@@ -4,5 +4,3 @@ export type InputType = "search"
 | "file" 
 | "text"
 
-export type StateType = 
-"error" | "success" | "default"

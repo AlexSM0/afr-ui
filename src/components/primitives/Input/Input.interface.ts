@@ -1,8 +1,8 @@
 import type { VariantProps } from "class-variance-authority";
 import { inputStyles } from "./Input.styles";
 import type React from "react";
-import type { StateType, InputType } from "@/types/input";
-
+import type { InputType } from "@/types/input";
+import type { StateType } from "@/types/globals"
 
 export interface InputProps
   extends VariantProps<typeof inputStyles>,
